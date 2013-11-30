@@ -41,10 +41,10 @@
             var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
 
             //inflict damage
-            playerOneHealth-=f1;
-            playerTwoHealth-=f2;
+            fighter1[2]-=f1;
+            fighter2[2]-=f2;
 
-            console.log(playerOneName+": "+playerOneHealth + " " + playerTwoName+":"+playerTwoHealth);
+            console.log(fighter1[0]+": "+fighter1[2] + " " + fighter2[0]+":"+fighter2[2]);
 
             //check for victor
             var result = winnerCheck();
@@ -52,7 +52,7 @@
             if (result==="no winner")
             {
                 round++;
-                alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth);
+                alert(fighter1[0]+":"+fighter1[2]+"  *ROUND "+round+" OVER"+"*  "+fighter2[0]+":"+fighter2[2]);
 
             } else{
                 alert(result);
